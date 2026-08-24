@@ -28,7 +28,7 @@ function TractionLogo({ name, domain }: { name: string; domain: string }) {
       className="flex items-center gap-3 hover:opacity-80 transition-opacity"
     >
       <Image
-        src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
+        src={`https://icons.duckduckgo.com/ip3/${domain}.ico`}
         alt={name}
         width={20}
         height={20}
