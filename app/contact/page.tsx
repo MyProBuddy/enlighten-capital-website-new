@@ -39,7 +39,7 @@ export default function ContactPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a
-            href="https://forms.zohopublic.in/enlightencapital06gm1/form/StartupFundingApplication/formperma/xdgG00m0sh5H7nLcAj0cvoZVTwj35TB4cYEU_GcO4rU"
+            href="https://dealroom.enlightencapital.in/#startup"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#C9A14A] hover:bg-[#b08d41] text-black px-14 py-6 rounded-md font-bold text-sm tracking-[0.2em] uppercase transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-[#C9A14A]/20"

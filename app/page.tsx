@@ -89,7 +89,7 @@ export default function Home() {
           className="mt-16 flex flex-wrap gap-6"
         >
           <a
-            href="https://forms.zohopublic.in/enlightencapital06gm1/form/StartupFundingApplication/formperma/xdgG00m0sh5H7nLcAj0cvoZVTwj35TB4cYEU_GcO4rU"
+            href="https://dealroom.enlightencapital.in/#startup"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#C9A14A] hover:bg-[#b08d41] text-black px-12 py-5 rounded-md font-bold text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#C9A14A]/20"

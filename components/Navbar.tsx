@@ -52,7 +52,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-4 w-full md:w-auto pt-4 md:pt-0 border-t border-black/5 dark:border-white/5 md:border-none">
           <a
-            href="https://forms.zohopublic.in/enlightencapital06gm1/form/StartupFundingApplication/formperma/xdgG00m0sh5H7nLcAj0cvoZVTwj35TB4cYEU_GcO4rU"
+            href="https://dealroom.enlightencapital.in/#startup"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[11px] bg-[#C9A14A] hover:bg-[#b08d41] text-black px-5 py-2.5 rounded-md font-bold tracking-widest uppercase transition-all shadow-lg shadow-[#C9A14A]/10"
