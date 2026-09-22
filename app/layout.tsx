@@ -42,7 +42,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange={false}
         >
@@ -57,4 +57,3 @@ export default function RootLayout({
     </html>
   );
 }
-

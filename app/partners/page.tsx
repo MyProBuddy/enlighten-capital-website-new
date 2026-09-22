@@ -97,7 +97,7 @@ export default function PartnersPage() {
             Institutional Partnerships
           </h1>
           <p className="text-2xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-3xl font-serif italic">
-            We collaborate with category-leading institutions to strengthen sourcing, execution, and long-term governance for our portfolio companies.
+            We collaborate with leading institutions to strengthen sourcing, execution, and lasting governance for our portfolio companies.
           </p>
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function PartnersPage() {
           <PartnerCard
             type="Strategic Partner"
             title="Startup Singam"
-            desc="Strategic collaboration for high-potential early-stage opportunities."
+            desc="Strategic collaboration for promising early stage opportunities."
             logoPath="/partners/startup-singam.png"
             websiteUrl="https://www.startupsingam.com/"
             delay={0.1}
@@ -113,7 +113,7 @@ export default function PartnersPage() {
           <PartnerCard
             type="Investment Partner"
             title="Enlighten Angel Fund"
-            desc="Direct co-investment channel for angel-backed category leaders."
+            desc="Direct shared investment channel for category leaders backed by angel investors."
             delay={0.2}
           />
           <PartnerCard
@@ -127,7 +127,7 @@ export default function PartnersPage() {
           <PartnerCard
             type="Ecosystem Partner"
             title="MyProBuddy"
-            desc="Partnering on fund growth, supporting LP capital mobilisation and providing a curated pipeline of investment-ready startups for portfolio deployment."
+            desc="Partnering on fund growth, supporting LP capital mobilisation, and providing a curated pipeline of startups ready for portfolio deployment."
             logoPath="/partners/myprobuddy.png"
             logoText="MyProBuddy"
             keepOriginalColors={true}
@@ -145,7 +145,7 @@ export default function PartnersPage() {
         >
           <h2 className="text-4xl md:text-5xl font-serif mb-8 text-slate-900 dark:text-slate-100">Partner with us</h2>
           <p className="text-slate-600 dark:text-slate-400 text-xl max-w-2xl mx-auto mb-12 font-light">
-            Interested in exploring an institutional partnership? Let's discuss how we can build the future together.
+            Interested in exploring an institutional partnership? Let&apos;s discuss how we can build the future together.
           </p>
           <Link
             href="/contact"

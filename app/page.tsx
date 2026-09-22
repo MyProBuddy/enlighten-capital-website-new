@@ -19,10 +19,10 @@ function Sector({ title, desc }: { title: string; desc: string }) {
   );
 }
 
-function TractionLogo({ name, domain }: { name: string; domain: string }) {
+function ProfileLink({ name, domain, href }: { name: string; domain: string; href: string }) {
   return (
     <a
-      href={`https://${domain}`}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-3 hover:opacity-80 transition-opacity"
@@ -39,6 +39,21 @@ function TractionLogo({ name, domain }: { name: string; domain: string }) {
     </a>
   );
 }
+
+const pressReleases = [
+  {
+    publication: "YourStory",
+    date: "December 2024",
+    title: "Enlighten Angel Fund rebrands to Enlighten Capital, raises ₹100 Cr micro VC fund",
+    href: "https://yourstory.com/2024/12/enlighten-angel-fund-rebrands-enlighten-capital-raises-rs-100-cr-micro-vc-fund",
+  },
+  {
+    publication: "BW Disrupt",
+    date: "December 2024",
+    title: "Enlighten Angel Fund rebrands to Enlighten Capital and introduces a micro VC fund",
+    href: "https://www.bwdisrupt.com/article/enlighten-angel-fund-rebrands-to-enlighten-capital-introduces-rs-200-crore-micro-vc-fund-543211",
+  },
+];
 
 export default function Home() {
   return (
@@ -64,7 +79,7 @@ export default function Home() {
           className="mt-12 max-w-2xl border-l-[3px] border-[#C9A14A] pl-8"
         >
           <strong className="text-slate-800 dark:text-slate-200 font-serif text-2xl md:text-3xl block mb-2">Seed to Series A</strong>
-          <span className="text-base md:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">Disciplined entry. Structured governance. Long-term ownership.</span>
+          <span className="text-base md:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">Disciplined entry. Structured governance. Lasting ownership.</span>
         </motion.div>
 
         <motion.div
@@ -133,14 +148,14 @@ export default function Home() {
             transition={{ delay: 0.1 }}
             className="text-slate-500 dark:text-slate-400 text-xl font-light"
           >
-            Concentrated conviction in high-impact technology.
+            Concentrated conviction in transformative technology.
           </motion.p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <Sector title="Deep Tech" desc="Hard engineering and breakthroughs that solve fundamental problems." />
-          <Sector title="Fintech" desc="Next-gen financial infrastructure and democratized access to capital." />
-          <Sector title="SaaS" desc="Enterprise-grade software solutions with scalable unit economics." />
+          <Sector title="Fintech" desc="Modern financial infrastructure and broader access to capital." />
+          <Sector title="SaaS" desc="Enterprise software solutions with scalable unit economics." />
           <Sector title="Emerging" desc="Identifying and enabling new markets through technological shifts." />
         </div>
 
@@ -151,23 +166,60 @@ export default function Home() {
           className="mt-32 p-12 rounded-[2.5rem] bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-900 dark:to-black border border-[#C9A14A]/20 text-center"
         >
           <p className="text-2xl text-slate-500 dark:text-slate-400 font-serif tracking-wide">
-            <strong className="text-[#C9A14A] font-normal italic mr-2">India-first.</strong> Global ambition.
+            <strong className="text-[#C9A14A] font-normal italic mr-2">India focused.</strong> Global ambition.
           </p>
         </motion.div>
       </section>
 
-      {/* TRACTION */}
+      <section className="px-6 md:px-10 py-32 max-w-6xl mx-auto relative z-10 border-t border-slate-200 dark:border-slate-800">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div>
+            <p className="text-xs text-[#C9A14A] uppercase tracking-[4px] mb-5 font-bold">Media coverage</p>
+            <h2 className="text-4xl md:text-6xl font-serif text-slate-900 dark:text-slate-100">Enlighten Capital in the news</h2>
+          </div>
+          <p className="max-w-md text-slate-500 dark:text-slate-400 leading-relaxed md:text-right">
+            Independent coverage of our fund, strategy, and evolution.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {pressReleases.map((release) => (
+            <a
+              key={release.href}
+              href={release.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 md:p-10 rounded-3xl bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-slate-800 hover:border-[#C9A14A]/60 transition-colors"
+            >
+              <div className="flex items-center gap-3 mb-8">
+                <Image
+                  src={`https://icons.duckduckgo.com/ip3/${new URL(release.href).hostname}.ico`}
+                  alt=""
+                  width={20}
+                  height={20}
+                  unoptimized
+                  className="object-contain"
+                />
+                <span className="text-sm font-bold text-[#C9A14A]">{release.publication}</span>
+                <span className="text-sm text-slate-400">{release.date}</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-serif leading-snug text-slate-900 dark:text-slate-100 group-hover:text-[#C9A14A] transition-colors">
+                {release.title}
+              </h3>
+              <span className="inline-block mt-10 text-xs uppercase tracking-[3px] font-bold text-slate-500 dark:text-slate-400">
+                Read coverage
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="px-6 md:px-10 py-32 max-w-6xl mx-auto text-center relative z-10 border-t border-slate-200 dark:border-slate-800">
         <h2 className="text-xs text-slate-400 dark:text-slate-500 uppercase tracking-[5px] mb-16 font-bold">
-          Market Recognition & Traction
+          External profiles
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12">
-          <TractionLogo name="YourStory" domain="yourstory.com" />
-          <TractionLogo name="BW Disrupt" domain="bwdisrupt.com" />
-          <TractionLogo name="PitchBook" domain="pitchbook.com" />
-          <TractionLogo name="Crunchbase" domain="crunchbase.com" />
-          <TractionLogo name="Tracxn" domain="tracxn.com" />
-          <TractionLogo name="PEI" domain="privateequityinternational.com" />
+          <ProfileLink name="Tracxn" domain="tracxn.com" href="https://platform.tracxn.com/a/d/company/680c4e4ddda3fe5886db2887/enlightencapital#a:about" />
+          <ProfileLink name="YNOS" domain="ynos.in" href="https://www.ynos.in/venture-capital/enlighten-capital-005853" />
         </div>
       </section>
     </section>

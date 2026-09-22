@@ -2,21 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { Sun, Moon, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const navLinks = [
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Team", href: "/team" },
     { name: "Founders", href: "/founders" },
     { name: "Investors", href: "/investors" },
     { name: "Partners", href: "/partners" },
@@ -38,13 +32,13 @@ export function Navbar() {
         </Link>
 
         <div className="flex items-center gap-4 md:hidden">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
+          <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2" aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={mobileMenuOpen} aria-controls="primary-navigation">
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
-      <div className={`${mobileMenuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row items-start md:items-center gap-6 mt-6 md:mt-0`}>
+      <div id="primary-navigation" className={`${mobileMenuOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row items-start md:items-center gap-6 mt-6 md:mt-0`}>
         {navLinks.map((link) => (
           <Link
             key={link.name}
@@ -63,7 +57,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="text-[11px] bg-[#C9A14A] hover:bg-[#b08d41] text-black px-5 py-2.5 rounded-md font-bold tracking-widest uppercase transition-all shadow-lg shadow-[#C9A14A]/10"
           >
-            Apply
+            Apply for Funding
           </a>
         </div>
       </div>

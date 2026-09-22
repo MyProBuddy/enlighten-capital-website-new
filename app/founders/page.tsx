@@ -40,7 +40,7 @@ export default function FoundersPage() {
         <div className="grid md:grid-cols-3 gap-8 mb-32">
           <ExpectationCard
             title="We invest in:"
-            items={["Post-revenue companies", "₹20–80 Cr valuation range", "Clear path to scale"]}
+            items={["Companies with revenue", "₹20 Cr to ₹80 Cr valuation range", "Clear path to scale"]}
             delay={0.1}
           />
           <ExpectationCard
@@ -50,7 +50,7 @@ export default function FoundersPage() {
           />
           <ExpectationCard
             title="What you get:"
-            items={["Strategic capital", "Structured support", "Long-term partnership"]}
+            items={["Strategic capital", "Structured support", "Lasting partnership"]}
             delay={0.3}
           />
         </div>

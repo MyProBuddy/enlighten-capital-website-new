@@ -16,7 +16,7 @@ export default function InvestorsPage() {
           transition={{ duration: 0.6 }}
           className="text-5xl md:text-7xl font-serif mb-12 text-slate-900 dark:text-slate-100 leading-[1.1]"
         >
-          Access disciplined early-stage exposure
+          Access disciplined early stage exposure
         </motion.h1>
 
         <motion.div 
@@ -45,7 +45,7 @@ export default function InvestorsPage() {
             <ul className="text-slate-600 dark:text-slate-400 space-y-5 list-disc pl-5 font-light text-lg">
               <li>Curated deal flow</li>
               <li>Structured capital deployment</li>
-              <li>Institutional-grade governance</li>
+              <li>Institutional governance</li>
               <li>Transparent reporting</li>
             </ul>
           </motion.div>
