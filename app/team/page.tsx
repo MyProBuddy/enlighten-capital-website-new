@@ -75,7 +75,7 @@ const advisors: TeamMember[] = [
   {
     name: "Amrish Krishnan",
     role: "Advisor to the Board and Head of Investment Banking",
-    image: "/team/hq-amrish.png",
+    image: "/team/hq-amrish.jpg",
     linkedin: "https://www.linkedin.com/in/amrish-krishnan",
     position: "50% 32%",
     scale: 1,
